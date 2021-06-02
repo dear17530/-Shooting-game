@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&family=Zen+Dots&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="/20210419-jq/射擊遊戲2/fontawesome-free-5.15.2-web/css/all.min.css">
+  <link rel="stylesheet" href="./fontawesome-free-5.15.2-web/css/all.min.css">
   <title>Document</title>
   <style>
     html,
@@ -163,10 +163,10 @@
 
 <body onload="animateStart()">
   <div id="game">
-    <img src="/20210419-jq/射擊遊戲2/space.png" id="space" />
-    <img src="/20210419-jq/射擊遊戲2/exhaust.png" id="exhaust" />
-    <img src="/20210419-jq/射擊遊戲2/gas.png" id="gas" />
-    <img src="/20210419-jq/射擊遊戲2/rocket.png" id="rocket" draggable="false" />
+    <img src="./space.png" id="space" />
+    <img src="./exhaust.png" id="exhaust" />
+    <img src="./gas.png" id="gas" />
+    <img src="./rocket.png" id="rocket" draggable="false" />
     <input type="button" value="Start" id="btnStart" />
     <input type="button" value="Again" id="btnAgain" />
     <div class="light"></div>
@@ -184,7 +184,7 @@
       <span id="highestscore">Highest Score:</span>
     </div>
   </div>
-  <script src="/jquery-3.6.0.min.js"></script>
+  <script src="./jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
   <script>
     let score = 0
@@ -377,7 +377,7 @@
       let hourglassY = Math.round(Math.random() * 60) + 20
 
       if (randQuantity > 2 && $('#game .meteorite').length < 15) {
-        const meteorite = $(`<img src="/20210419-jq/射擊遊戲2/meteorite.png" class="meteorite"
+        const meteorite = $(`<img src="./meteorite.png" class="meteorite"
                     style="left:${meteoriteRandX}vw;top:${meteoriteRandY}vh;
                     width:60px;height:60px;animation: animationM 5s infinite forwards;">`)
         $('#game').append(meteorite)
@@ -385,14 +385,14 @@
       }
 
       if (randQuantity > 10 && $('#game .yellowGun').length < 1) {
-        const yellowGun = $(`<img src="/20210419-jq/射擊遊戲2/yellogun.png" class="yellowGun"
+        const yellowGun = $(`<img src="./yellogun.png" class="yellowGun"
                     style="left:${yellowGunX}vw;top:${yellowGunY}vh;
                     width:50px;animation: animationP 2s infinite forwards;">`)
         $('#game').append(yellowGun)
       }
 
       if (randQuantity > 10 && $('#game .hourglass').length < 1) {
-        const hourglass = $(`<img src="/20210419-jq/射擊遊戲2/hourglass.png" class="hourglass"
+        const hourglass = $(`<img src="./hourglass.png" class="hourglass"
                     style="left:${hourglassX}vw;top:${hourglassY}vh;
                     width:50px;animation: animationP 2s infinite forwards;">`)
         $('#game').append(hourglass)
